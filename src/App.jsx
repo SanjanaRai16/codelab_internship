@@ -33,8 +33,9 @@ function App() {
 //   price:15000,
 //   category:"android"}
 // ]
+//condition? trueblock:falseblock
   return (
-   <div>
+   <div style={{backgroundColor:isDark?"black":"white",color:isDark?"white":"black"}}>
    {/* <Home/>
    <Test/>
    <Variables/>
@@ -48,7 +49,7 @@ xwqLlsSuPKWGojLAhmcvGWIIrJKwjgr2r53cHVDZBTsH94RkvtilucduuaCSQRgx15IybBLRDFJIMD3s
    {/* {Data.map((iten)=>(<Card key={iten.id} title={iten.title} category={iten.category} price={iten.price} image={iten.image}/>))}
    <Hooks/> */}
     <Hooks/> 
-    <button onClick={()=>setIsDark(true)}>Darkmode</button>
+    <button onClick={()=>setIsDark(!isDark)}>Darkmode</button>
    </div>
    
   )
