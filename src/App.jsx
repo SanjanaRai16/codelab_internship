@@ -11,6 +11,8 @@ import Map from './ES/Map'
 import Card from './components/Card'
 import Hooks from './components/Hooks'
 import Form from './components/Form'
+import MuiComponents from './Mui/MuiComponents'
+import Products from './Mui/components/Products'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
@@ -63,14 +65,17 @@ function App() {
 //224-06-15 Updated Code Starts Here for routing imprt 3 components from react router package
 return (
   <div >
-   <BrowserRouter>
+<BrowserRouter>
 <Routes>
 <Route path='/' element={<Home/>}/>    {/*path=endpoint ,path should be umique ,only / makes the compont that is rendered as home page or entry page*/}  
 <Route path='/form' element={<Form/>}/>
 <Route path='/hooks' element={<Hooks/>}/>
 <Route path='/map' element={<Map/>}/>
+{/*23-01-26*/}
+<Route path='/mui' element={<MuiComponents/>}/>
+<Route path='/products' element={<Products/>}/>
 </Routes>
-   </BrowserRouter>  {/* Allows clientside routing */}
+</BrowserRouter>  {/* Allows clientside routing */}
   </div>
   )
 }
@@ -78,3 +83,4 @@ return (
 
 export default App
  //task form product name price description image  and image url path one page  4 input field wen submit is clicked it shoud show one card
+ //23-01-26 mui,inreact we can use packages or cdn links instead of bootstrap
