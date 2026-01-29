@@ -14,6 +14,7 @@ import Form from './components/Form'
 import MuiComponents from './Mui/MuiComponents'
 import Products from './Mui/components/Products'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import ResponsiveAppBar from './Mui/components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
   const [isDark,setIsDark]=useState(false)
@@ -66,6 +67,7 @@ function App() {
 return (
   <div >
 <BrowserRouter>
+<ResponsiveAppBar/> {/* 29/01/2026 Navbar component imported from mui */}
 <Routes>
 <Route path='/' element={<Home/>}/>    {/*path=endpoint ,path should be umique ,only / makes the compont that is rendered as home page or entry page*/}  
 <Route path='/form' element={<Form/>}/>
